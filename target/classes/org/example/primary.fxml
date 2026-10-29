@@ -18,7 +18,11 @@
       <RadioButton fx:id="dateFormatShort" mnemonicParsing="false" text="Krótki Format" toggleGroup="$format" />
       <RadioButton fx:id="dateFormatRoman" mnemonicParsing="false" text="Rzymski Format" toggleGroup="$format" />
       <RadioButton fx:id="dateFormatNumber" mnemonicParsing="false" text="Numeryczny Format" toggleGroup="$format" />
-      <HBox prefHeight="100.0" prefWidth="200.0" />
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#previousWeek" prefHeight="25.0" prefWidth="181.0" text="Poprzedni Tydzień" />
+            <Button mnemonicParsing="false" onAction="#nextWeek" prefHeight="25.0" prefWidth="190.0" text="Kolejny Tydzień" />
+         </children></HBox>
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

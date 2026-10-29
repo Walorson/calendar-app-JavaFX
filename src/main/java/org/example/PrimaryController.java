@@ -19,6 +19,8 @@ public class PrimaryController {
 
     Date today = new Date(29, 10, 2026);
 
+    private int format = Date.LONG_FORMAT;
+
     @FXML
     private Label dateLabel;
 
@@ -29,7 +31,7 @@ public class PrimaryController {
         dateFormatRoman.setOnAction(event -> changeFormat(Date.ROMAN_FORMAT));
         dateFormatNumber.setOnAction(event -> changeFormat(Date.NUMBER_FORMAT));
 
-        dateLabel.setText(today.getDate(Date.LONG_FORMAT));
+        dateLabel.setText(today.getDate(format));
     }
 
     @FXML
@@ -38,7 +40,20 @@ public class PrimaryController {
     }
 
     @FXML
-    private void changeFormat(final int format) {
+    private void nextWeek() {
+        today.nextWeek();
+        dateLabel.setText(today.getDate(format));
+    }
+
+    @FXML
+    private void previousWeek() {
+        today.previousWeek();
+        dateLabel.setText(today.getDate(format));
+    }
+
+    @FXML
+    private void changeFormat(final int f) {
+        format = f;
         dateLabel.setText(today.getDate(format));
     }
 }
