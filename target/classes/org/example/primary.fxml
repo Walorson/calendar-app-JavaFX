@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="260.0" prefWidth="366.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PrimaryController">
+   <children>
+      <Label fx:id="dateLabel" text="29 October 2026">
+         <font>
+            <Font name="Reem Kufi Regular" size="33.0" />
+         </font></Label>
+      <RadioButton fx:id="dateFormatLong" mnemonicParsing="false" text="Długi Format">
+         <toggleGroup>
+            <ToggleGroup fx:id="format" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="dateFormatShort" mnemonicParsing="false" text="Krótki Format" toggleGroup="$format" />
+      <RadioButton fx:id="dateFormatRoman" mnemonicParsing="false" text="Rzymski Format" toggleGroup="$format" />
+      <RadioButton fx:id="dateFormatNumber" mnemonicParsing="false" text="Numeryczny Format" toggleGroup="$format" />
+      <HBox prefHeight="100.0" prefWidth="200.0" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
